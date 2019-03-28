@@ -93,7 +93,7 @@ Resources:
         Type: "AWS::RDS::DBParameterGroup"
         Properties: 
             Description: Prisma DB parameter group 
-            Family: postgres10
+            Family: postgres11
             Parameters:
                 max_connections: 300
 
@@ -101,7 +101,7 @@ Resources:
         Type: AWS::RDS::DBInstance
         Properties:
             Engine: postgres
-            EngineVersion: 10.6
+            EngineVersion: 11.1
             DBInstanceClass:
                 Ref: DatabaseInstanceType
             DBSubnetGroupName:
